@@ -55,3 +55,23 @@ tools:
   não usa token). Contém apenas metadados — não código nem segredos.
 - Repos privados (ex.: `LocatelliSupermercados/*`) são referenciados aqui por
   URL; o clone depende das creds git do utilizador.
+
+## GameDev (público)
+
+O monorepo [`maikramer/GameDev`](https://github.com/maikramer/GameDev) expõe
+15 ferramentas + meta `gamedev` (instala `all`):
+
+| Chave | Ferramenta | Tipo |
+|-------|------------|------|
+| `text2d`, `text3d`, `texture2d`, … | Python GPU tools | Python 3.13 |
+| `materialize` | PBR material CLI | Rust (`cargo`) |
+| `vibegame` | Browser 3D engine | Bun |
+| `gamedev` | Todas as ferramentas presentes no checkout | meta → `all` |
+
+One-liner (sem clone):
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/maikramer/clified/main/install.sh | bash -s -- --get text2d
+```
+
+Chaves = entradas em `GameDev/tools.yaml`. Com clone: `./install.sh text2d` na raiz do repo.

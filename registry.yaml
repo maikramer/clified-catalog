@@ -32,10 +32,3 @@ tools:
     tools_yaml: tools.yaml
     description: "CLI do Projeto Cursor (Flutter + Supabase)"
     access: private
-
-  smoke:
-    repo: https://github.com/maikramer/clified-catalog.git
-    tool: smoke
-    tools_yaml: tools.yaml
-    description: "Demo entry — validar catálogo live sem release do clified"
-    access: public

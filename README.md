@@ -9,6 +9,13 @@ fallback ao catálogo embutido no pacote quando está offline). Adicionar ou
 alterar uma ferramenta aqui fica imediatamente disponível via
 `clified-install --get <tool>` / `--catalog` — **sem** novo release do clified.
 
+A partir do clified **0.8**, os subcomandos `clified` também consomem este
+catálogo: `clified search <termo>` filtra entradas (marca `(privado)` /
+`[instalado]`) e `clified get <tool>` instala; `clified list` / `clified update` /
+`clified uninstall` gerem o que já está instalado (state em
+`~/.config/clified/state.json`). Ver
+[Managing installed tools](https://github.com/maikramer/clified#managing-installed-tools).
+
 ## Esquema (`tools:`)
 
 ```yaml

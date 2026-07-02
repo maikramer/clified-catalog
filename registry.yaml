@@ -1,0 +1,34 @@
+# Catálogo live do Clified — lido por defeito por `clified-install`.
+# (Este repo é público; apenas metadados. Os repos privados continuam a exigir
+#  as credenciais git do utilizador no clone — o clified falha de forma suave
+#  com uma mensagem clara quando não há acesso.)
+#
+# Campos por ferramenta:
+#   repo:        URL git do repositório (público ou privado)
+#   tool:        nome da ferramenta a passar a `clified-install` (chave em tools.yaml do repo)
+#   tools_yaml:  caminho do tools.yaml dentro do repo (default: tools.yaml)
+#   description: descrição curta (apresentada em `--catalog`)
+#   access:      public (default) | private (informational; private requer permissão
+#                de leitura no git da organização — ex.: Locatelli)
+
+tools:
+  denv:
+    repo: https://github.com/LocatelliSupermercados/LocatelliDockerManager.git
+    tool: denv
+    tools_yaml: tools.yaml
+    description: "Docker Environment Manager — operações Docker Swarm (Locatelli)"
+    access: private
+
+  cissapi:
+    repo: https://github.com/LocatelliSupermercados/LocatelliCissApi.git
+    tool: cissapi
+    tools_yaml: cli/tools.yaml
+    description: "CLI para a API CISS / DB2 (Locatelli)"
+    access: private
+
+  pc:
+    repo: https://github.com/LocatelliSupermercados/ProjetoCursor.git
+    tool: pc
+    tools_yaml: tools.yaml
+    description: "CLI do Projeto Cursor (Flutter + Supabase)"
+    access: private
